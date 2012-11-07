@@ -6,22 +6,22 @@
 
 ## Process substitution
 
-        $ vi =(cmd)            # ... (edits the output of cmd - writes cmd output to a temp file)
-        $ vi <(cmd)            # ... (edits the output of cmd - writes cmd output to a named pipe)
+    $ vi =(cmd)            # ... (edits the output of cmd - writes cmd output to a temp file)
+    $ vi <(cmd)            # ... (edits the output of cmd - writes cmd output to a named pipe)
 
 ## Generalized Pipes
 
 ## Modifiers
 
-        :h --> head (dirname)
-        :t --> tail (basename)
-        :r --> rest (extension removed)
-        :e --> extension only
-        :l --> convert to lowercase
-        :u --> convert to uppercase
+    * :h --> head (dirname)
+    * :t --> tail (basename)
+    * :r --> rest (extension removed)
+    * :e --> extension only
+    * :l --> convert to lowercase
+    * :u --> convert to uppercase
 
-        $ for f (*.sh) mv $f $f:r
-        $ for f (*.txt) mv $f $f:l
+    $ for f (*.sh) mv $f $f:r
+    $ for f (*.txt) mv $f $f:l
 
 ## Automatic file stream teeing (Multi-IO)
 

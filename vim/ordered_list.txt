@@ -1,0 +1,25 @@
+item one
+item two
+item three
+item four
+
+
+
+
+
+
+
+
+
+======================
+    :let i=1
+    qa
+    I<C-r>=i<CR>.
+    <Esc>
+    :let i+=1
+    q
+
+    <visual-select> normal @a
+    gv
+    >
+
