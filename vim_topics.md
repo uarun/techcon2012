@@ -73,7 +73,7 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 ## Fun with Visual Mode
 
   * `gv` reselect the last visual mode selection
-  * Edit tabular data with visual block mode [__file:__ _depth_chart.txt_)
+  * Edit tabular data with visual block mode (__file:__ _depth_chart.txt_)
   * Change columns of text
 
 ## Whitespace sanity
@@ -94,7 +94,7 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
         :%s//<C-r><C-w>/g
 
   * Run commands in the shell
-  * Filter buffer contents through an external command [__file:__ _people.csv_]
+  * Filter buffer contents through an external command (__file:__ _people.csv_)
 
         :'<,'>!sort -t',' -k2
 
@@ -109,8 +109,8 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 ## Pattern Matching
 
   * Case sensitivity of searches (`incsearch`, `hlsearch`, `smartcase`)
-  * `very magic` switch  (`\v`)    [__file:__ _people.csv_]
-  * `very nomagic` switches (`\V`) [Ex: 'i.e.' vs 'iced']
+  * "very magic" switch  (`\v`)    (__file:__ _people.csv_)
+  * "very nomagic" switches (`\V`) [Ex: 'i.e.' vs 'iced']
   * Reuse last search pattern
 
         %s//.../
@@ -141,9 +141,9 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 
         :v/href/d
 
-  * Collect items to a register [__file:__ _GroovyP..P..C...java_]
+  * Collect items to a register (__file:__ _GroovyP..P..C...java_)
 
-        :g/TODO/yank A       (:let @a="" to clear a register)
+        :g/TODO/yank A       (`:let @a=""` to clear a register)
         :put a
         :g/TODO/t$           (if you want to copy it to the end of the same file instead)
 
