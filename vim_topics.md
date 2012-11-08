@@ -30,7 +30,8 @@ Understand the difference between word and WORD
 ### Search to Navigate
 
   * Use search to quickly navigate.
-  * Combine it that any command that takes a motion like 
+  * Combine it that any command that takes a motion like
+
         d{motion}
         c{motion} etc
 
@@ -173,6 +174,9 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
   * Fugitive
   * Surround
   * Tslime
+
+        <C-c>r      Set tmux vars
+        <C-c><C-c>  Send stuff to tmux
 
 ## Misc
 
