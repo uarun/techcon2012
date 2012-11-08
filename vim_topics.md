@@ -73,7 +73,7 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 ## Fun with Visual Mode
 
   * `gv` reselect the last visual mode selection
-  * Edit tabular data with visual block mode [File: _depth_chart.txt_)
+  * Edit tabular data with visual block mode [**file:** _depth_chart.txt_)
   * Change columns of text
 
 ## Whitespace sanity
@@ -84,15 +84,17 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 ## Command-line Mode
 
   * Run normal mode commands
+
         `:'<,'> normal .` execute dot command over visual selection
         `:% normal A;` add semicolon at the end of each line
         `:% normal i//` add comment to all lines
 
   * `<C-r><C-w>` inserts current word at the command prompt
+
         `:%s//<C-r><C-w>/g`
 
   * Run commands in the shell
-  * Filter buffer contents through an external command (Ex: "sort -t',' -k2") [File: _people.csv_]
+  * Filter buffer contents through an external command (Ex: "sort -t',' -k2") [**file:** _people.csv_]
   * Duplicate/Move lines :t and :m
 
         :6t.     Copy line 6 to just below the current line
@@ -104,7 +106,7 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 ## Pattern Matching
 
   * Case sensitivity of searches (`incsearch`, `hlsearch`, `smartcase`)
-  * 'very magic' switch  (\v)    [File: `people.csv`]
+  * 'very magic' switch  (\v)    [**file:** _people.csv_]
   * 'very nomagic' switches (\V) [Ex: 'i.e.' vs 'iced']
   * Reuse last search pattern
 
