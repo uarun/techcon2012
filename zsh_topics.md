@@ -1,4 +1,4 @@
-# Command Line Fu
+# Zsh
 
 ## History substring search
 
@@ -6,8 +6,8 @@
 
 ## Full vi line editing
 
-  * Navigation (like cw)
-  * fc (edit previous command in full vi)
+  * Navigation (like `cw`)
+  * `fc` (edit previous command in full vi)
   * Search history with anchors
 
 ## Spelling correction
