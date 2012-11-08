@@ -5,7 +5,7 @@
   * Normal mode
   * Insert mode
   * Visual mode
-  * Command Line mode
+  * Command Line mode (Ex mode)
 
 ## Navigation
 
@@ -75,10 +75,13 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 ## Fun with Visual Mode
 
   * `gv` reselect the last visual mode selection
-  * Edit tabular data with visual block mode
+  * Edit tabular data with visual block mode (depth_chart.txt)
   * Change columns of text
 
 ## Whitespace sanity
+
+    set list
+    set listchars=tab:>-,trail:·
 
 ## Command-line Mode
 
@@ -89,35 +92,76 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
   * `<C-r><C-w>` inserts current word at the command prompt
     - `:%s//<C-r><C-w>/g`
   * Run commands in the shell
-  * Filter buffer contents through an external command (Ex: "sort -t',' -k2")
+  * Filter buffer contents through an external command (Ex: "sort -t',' -k2") (people.csv)
+  * Duplicate/Move lines :t and :m
+
+    :6t.     Copy line 6 to just below the current line
+    :t6      Copy the current line to just below line 6
+    :t.      Duplicate the current line (similar to Normal mode yyp) 
+    :t$      Copy the current line to the end of the file
+    :'<,'>t0 Copy the visually selected lines to the start of the file
 
 ## Pattern Matching
 
-  * Case sensitivity of searches
-  * 'very magic' and 'very nomagic' switches
+  * Case sensitivity of searches (incsearch, hlsearch)
+  * 'very magic' switch  (\v)    [people.csv]
+  * 'very nomagic' switches (\V) [Ex: 'i.e.' vs 'iced']
+  * Reuse last search pattern
+    %s//.../
   * Use parentheses to capture submatches
+    \v^([^,]*,\s*)([^,]*,\s*)(.*)$
+    :%s//\2\1\3
   * Word boundries
+    /\<macro\>  (or)
+    /\v<macro>
 
 ## Searching
 
-  * nohlsearch usage
+  * nohlsearch usage  (<leader> / mapping)
 
 ## Substitution
+
+## Global
+
+  * Deleting lines containing a pattern
+
+    :g//d
+
+  * Keeping lines matching a pattern
+
+    :v/href/d
+
+  * Collect items to a register (GroovyP..P..C...java)
+
+    :g/TODO/yank A              (:let @a="" to clear a register)
+    :put a
+    :g/TODO/t$ (if you want to copy it to the end of the same file instead)
 
 ## Macros
 
   * Recording and executing macros
-  * Repeat macro on contiguous lines
-  * Execute macros in serial and parallel
+  * Repeat macro on contiguous lines  (3@a, normal @a)
+  * Execute macros in serial and parallel  (show macro that would break searially)
   * Editing macros
+    :put a
+    edit macro in buffer
+    "add
+
+## Persistent Undos
 
 ## Plugins
 
+  * Tabularize
+  * Ctrl-P
   * Gundo - Graphical undo plugin
   * Zoomwin
   * Fugitive
-  * Tabularize
-  * Ctrl-P
   * Surround
   * Tslime
+
+## Misc
+
+  * Paste contents of register in insert and command mode  (Ctrl-R <reg>)
+    - <Ctrl-R>0 to paste hidden register
+    - <Ctrl-R>/ to paste the last search
 

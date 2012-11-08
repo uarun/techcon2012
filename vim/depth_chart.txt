@@ -1,0 +1,8 @@
+
+Position       Players
+ QB              2
+ RB              6
+ WR              6
+ OL              8
+ TE              3
+ FB              1
