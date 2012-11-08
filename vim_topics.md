@@ -95,25 +95,30 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
   * Filter buffer contents through an external command (Ex: "sort -t',' -k2") (people.csv)
   * Duplicate/Move lines :t and :m
 
-    :6t.     Copy line 6 to just below the current line
-    :t6      Copy the current line to just below line 6
-    :t.      Duplicate the current line (similar to Normal mode yyp) 
-    :t$      Copy the current line to the end of the file
-    :'<,'>t0 Copy the visually selected lines to the start of the file
+        :6t.     Copy line 6 to just below the current line
+        :t6      Copy the current line to just below line 6
+        :t.      Duplicate the current line (similar to Normal mode yyp) 
+        :t$      Copy the current line to the end of the file
+        :'<,'>t0 Copy the visually selected lines to the start of the file
 
 ## Pattern Matching
 
-  * Case sensitivity of searches (incsearch, hlsearch)
-  * 'very magic' switch  (\v)    [people.csv]
+  * Case sensitivity of searches (`incsearch`, `hlsearch`, `smartcase`)
+  * 'very magic' switch  (\v)    [`people.csv`]
   * 'very nomagic' switches (\V) [Ex: 'i.e.' vs 'iced']
   * Reuse last search pattern
-    %s//.../
+
+        %s//.../
+
   * Use parentheses to capture submatches
-    \v^([^,]*,\s*)([^,]*,\s*)(.*)$
-    :%s//\2\1\3
+
+        \v^([^,]*,\s*)([^,]*,\s*)(.*)$
+        :%s//\2\1\3
+
   * Word boundries
-    /\<macro\>  (or)
-    /\v<macro>
+
+        /\<macro\>  (or)
+        /\v<macro>
 
 ## Searching
 
