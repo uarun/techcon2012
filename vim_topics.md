@@ -73,7 +73,7 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 ## Fun with Visual Mode
 
   * `gv` reselect the last visual mode selection
-  * Edit tabular data with visual block mode [**file:** _depth_chart.txt_)
+  * Edit tabular data with visual block mode [__file:__ _depth_chart.txt_)
   * Change columns of text
 
 ## Whitespace sanity
@@ -85,29 +85,32 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 
   * Run normal mode commands
 
-        `:'<,'> normal .` execute dot command over visual selection
-        `:% normal A;` add semicolon at the end of each line
-        `:% normal i//` add comment to all lines
+        :'<,'> normal .  execute dot command over visual selection
+        :% normal A;`    add semicolon at the end of each line
+        :% normal i//    add comment to all lines
 
   * `<C-r><C-w>` inserts current word at the command prompt
 
-        `:%s//<C-r><C-w>/g`
+        :%s//<C-r><C-w>/g
 
   * Run commands in the shell
-  * Filter buffer contents through an external command (Ex: "sort -t',' -k2") [**file:** _people.csv_]
+  * Filter buffer contents through an external command [__file:__ _people.csv_]
+
+        :'<,'>!sort -t',' -k2
+
   * Duplicate/Move lines :t and :m
 
         :6t.     Copy line 6 to just below the current line
         :t6      Copy the current line to just below line 6
-        :t.      Duplicate the current line (similar to Normal mode yyp) 
+        :t.      Duplicate the current line (similar to Normal mode yyp)
         :t$      Copy the current line to the end of the file
         :'<,'>t0 Copy the visually selected lines to the start of the file
 
 ## Pattern Matching
 
   * Case sensitivity of searches (`incsearch`, `hlsearch`, `smartcase`)
-  * 'very magic' switch  (\v)    [**file:** _people.csv_]
-  * 'very nomagic' switches (\V) [Ex: 'i.e.' vs 'iced']
+  * `very magic` switch  (`\v`)    [__file:__ _people.csv_]
+  * `very nomagic` switches (`\V`) [Ex: 'i.e.' vs 'iced']
   * Reuse last search pattern
 
         %s//.../
@@ -138,7 +141,7 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 
         :v/href/d
 
-  * Collect items to a register [File: _GroovyP..P..C...java_]
+  * Collect items to a register [__file:__ _GroovyP..P..C...java_]
 
         :g/TODO/yank A       (:let @a="" to clear a register)
         :put a
