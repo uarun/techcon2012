@@ -2,6 +2,8 @@
 
 ## History substring search
 
+You can use `UP arrow` for history substring search
+
 ## Extremely intelligent TAB completion
 
 ## Full vi line editing
@@ -13,6 +15,8 @@
 ## Spelling correction
 
 ## Unix command option expansion
+
+        ls -<TAB>
 
 ## Right side prompt
 
@@ -28,7 +32,6 @@
 
         ls -l *(Lk+50)     #... List file size larger/greater than 50 KB
         ls -l *(.om[1,3])  #... List newest 3 files
-
 
 ## Modifiers
 
@@ -84,6 +87,10 @@ Global aliases can be used anywhere on the command line
 
 ## Completing Process IDs
 
+        sleep 100 &
+        sleep 50 &
+        kill s<<TAB>>
+
 ## Git Integration
 
 ## Push to Stack and Resume
@@ -92,6 +99,8 @@ Global aliases can be used anywhere on the command line
         bindkey -M viins '^O' copy-prev-shell-word
 
 ## Vared
+
+Inline variable editing with full command line vi bindings
 
         vared PATH
 
@@ -175,3 +184,4 @@ The name fasd comes from the default suggested aliases `f`(files),`a`(files/dire
 
         % bindkey " " magic-space
         % !1
+

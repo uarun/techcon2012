@@ -16,7 +16,7 @@
         e  Forward to end of current/next word
         ge Backward to end of previous word
 
-Understand the difference between word and WORD
+Understand the difference between word and WORD. Uppercase versions of the above commands will do WORD-wise move.
 
 ### Find by character
 
@@ -44,9 +44,11 @@ Understand the difference between word and WORD
   * Use line numbers
   * `H` `M` `L` to navigate to the Home, Middle or Bottom of the window repectively
 
+**Summary: ** Do not use the arrow keys or (h,j,k,l) keys to navigate to where you want to go. Use one or more of the above commands instead.
+
 ## Dot Command (find ways to use it)
 
-Dot command lets you repeat your last change
+Dot command lets you repeat your last change. It is like a mini macro that is being recorded and discarded continuously. Use the vi commands to perform edits so that you can effectively reuse the `.` command. For example use `A;` to insert a ";" at the end of line instead of `$a;` because the former is more _dot command_ friendly. Make sure you use the _dot command_ as much as possible.
 
 ## Use text objects for precise selection & editing
 
@@ -65,6 +67,8 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
     as  current sentence plus one space
     ip  current paragraph
     ap  current paragraph plus one blank line
+
+Text objects are very `.` command friendly
 
 ## Expression Register
 
@@ -94,7 +98,7 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 
         :%s//<C-r><C-w>/g
 
-  * Run commands in the shell
+  * Run commands in the shell  (examples: `:!ls`, `:!mkdir someDir` etc)
   * Filter buffer contents through an external command (__file:__ _people.csv_)
 
         :'<,'>!sort -t',' -k2
@@ -123,8 +127,8 @@ Works similarly for square brackes, angle brackets, single quotes, double quotes
 
   * Word boundries
 
-        /\<macro\>  (or)
-        /\v<macro>
+        /\<word\>  (or)
+        /\v<word>
 
 ## Searching
 
